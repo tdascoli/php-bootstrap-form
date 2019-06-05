@@ -1,9 +1,9 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_Radio extends OptionElement {
 	protected $_attributes = array("type" => "radio");
 	protected $inline;
 
-	public function render() { 
+	public function render() {
 		$labelClass = $this->getAttribute ('class');
 		if(!empty($this->inline))
 			$labelClass .= "radio-inline";

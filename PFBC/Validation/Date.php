@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Validation;
 class Validation_Date extends Validation {
     protected $message = "Error: %element% must contain a valid date.";
 

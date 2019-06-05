@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_SpanStart extends Element_HTML {
 	public function __construct($value, $size = 6) {
         if (empty ($size))
@@ -6,7 +6,7 @@ class Element_SpanStart extends Element_HTML {
         $html = "<div class='col-md-{$size}'>";
         if ($value == 1)
             $html = "<div class='row'>".$html;
-            
+
         if ($value > 1)
             $html = "</div>".$html;
         else if ($value == 0)

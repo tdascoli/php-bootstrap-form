@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Validation;
 class Validation_Captcha extends Validation {
 	protected $message = "Error: The reCATPCHA response provided was incorrect.  Please re-try.";
 	protected $privateKey;
@@ -14,7 +14,7 @@ class Validation_Captcha extends Validation {
 		$resp = recaptcha_check_answer ($this->privateKey, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 		if($resp->is_valid)
 			return true;
-		else	
+		else
 			return false;
 	}
 }

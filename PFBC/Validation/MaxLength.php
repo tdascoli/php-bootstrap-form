@@ -1,5 +1,4 @@
-<?php
-namespace PFBC\Validation;
+<?php namespace PFBC\Validation;
 
 class MaxLength extends \PFBC\Validation {
 	protected $message;
@@ -15,6 +14,6 @@ class MaxLength extends \PFBC\Validation {
 	public function isValid($value) {
 		if($this->isNotApplicable($value) || strlen($value) <= $this->limit)
 			return true;
-		return false;	
+		return false;
 	}
 }

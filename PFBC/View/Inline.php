@@ -1,4 +1,5 @@
-<?php
+<?php namespace PFBC\View;
+
 class View_Inline extends FormView {
     protected $class = "form-inline";
 

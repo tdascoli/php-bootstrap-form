@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_Button extends Element {
 	protected $_attributes = array("type" => "submit", "value" => "Submit");
 	protected $icon;
@@ -18,7 +18,7 @@ class Element_Button extends Element {
 			$properties["class"] .= " " . $class;
 		else
 			$properties["class"] = $class;
-		
+
 		if(empty($properties["value"]))
 			$properties["value"] = $label;
 

@@ -1,9 +1,9 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_Checksort extends Element_Sort {
 	protected $_attributes = array("type" => "checkbox");
 	protected $inline;
 
-	public function render() { 
+	public function render() {
 		if(isset($this->_attributes["value"])) {
 			if(!is_array($this->_attributes["value"]))
 				$this->_attributes["value"] = array($this->_attributes["value"]);
@@ -17,7 +17,7 @@ class Element_Checksort extends Element_Sort {
 		$labelClass = $this->_attributes["type"];
 		if(!empty($this->inline))
 			$labelClass .= "-inline";
-		
+
 		$count = 0;
 		$existing = "";
 
@@ -41,14 +41,14 @@ class Element_Checksort extends Element_Sort {
 
 	function renderJS() {
 		echo <<<JS
-if(typeof updateChecksort != "function") {		
+if(typeof updateChecksort != "function") {
 	function updateChecksort(element, text) {
 		var position = element.id.lastIndexOf("-");
 		var id = element.id.substr(0, position);
 		var index = element.id.substr(position + 1);
 		if(element.checked) {
 			jQuery("#" + id).append('<li id="' + id + '-sort-' + index + '" class="ui-state-default"><input type="hidden" name="{$this->_attributes["name"]}" value="' + element.value + '"/>' + text + '</li>');
-		}	
+		}
 		else
 			jQuery("#" + id + "-sort-" + index).remove();
 	}

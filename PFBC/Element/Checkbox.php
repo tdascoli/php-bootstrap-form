@@ -1,9 +1,9 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_Checkbox extends OptionElement {
 	protected $_attributes = array("type" => "checkbox");
 	protected $inline;
 
-	public function render() { 
+	public function render() {
 		if(isset($this->_attributes["value"])) {
 			if(!is_array($this->_attributes["value"]))
 				$this->_attributes["value"] = array($this->_attributes["value"]);

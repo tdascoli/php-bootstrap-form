@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_jQueryUIDate extends Element_Textbox {
 	protected $_attributes = array(
 		"type" => "text",

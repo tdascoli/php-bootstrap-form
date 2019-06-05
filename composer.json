@@ -1,8 +1,13 @@
 {
-	"name": "avbdr/php-bootstrap-form",
+	"name": "pfbc/php-bootstrap-form",
 	"description": "PHP Bootstrap Form Helper",
 	"license": "MIT",
     "authors": [
+       {
+            "name": "Thomas D'Ascoli",
+            "homepage": "https://dasco.li",
+            "role": "Developer"
+        },
         {
             "name": "Alexander V. Butenko",
             "email": "a.butenka@gmail.com",
@@ -21,6 +26,8 @@
 		"php": ">=5.3.0"
 	},
 	"autoload": {
-		"files": ["PFBC/Form.php"]
+      "psr-4": {
+          "PFBC\\": "PFBC/"
+      }
 	}
 }

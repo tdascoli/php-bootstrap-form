@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC;
 abstract class Element extends Base {
     protected $_errors = array();
     protected $_attributes = array();

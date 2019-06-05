@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_TinyMCE extends Element_Textarea {
     protected $basic;
 

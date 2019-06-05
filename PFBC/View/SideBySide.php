@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\View;
 class View_SideBySide extends FormView {
     protected $class = "form-horizontal";
     private $sharedCount = 0;

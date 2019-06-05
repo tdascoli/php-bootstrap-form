@@ -1,8 +1,8 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_Select extends OptionElement {
 	protected $_attributes = array();
 
-	public function render() { 
+	public function render() {
         $this->appendAttribute('class', 'c-select');
 		if(isset($this->_attributes["value"])) {
 			if(!is_array($this->_attributes["value"]))
@@ -24,9 +24,9 @@ class Element_Select extends OptionElement {
                     continue;
 				echo ' selected="selected"';
 				$selected = true;
-			}	
+			}
 			echo '>', $text, '</option>';
-		}	
+		}
 		echo '</select>';
 	}
 }

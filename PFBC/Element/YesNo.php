@@ -1,4 +1,4 @@
-<?php
+<?php namespace PFBC\Element;
 class Element_YesNo extends Element_Radio {
 	public function __construct($label, $name, array $properties = null) {
 		$options = array(
@@ -10,7 +10,7 @@ class Element_YesNo extends Element_Radio {
 			$properties = array("inline" => 1);
 		elseif(!array_key_exists("inline", $properties))
 			$properties["inline"] = 1;
-		
+
 		parent::__construct($label, $name, $options, $properties);
     }
 }
