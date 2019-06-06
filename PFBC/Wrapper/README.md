@@ -33,9 +33,30 @@ wrapper um aus einem file (json) ein formular zu generieren...
             ]
         }
     },
-    "form": { // http://smarttechdo.com/~avb/pfbc/api/#element-types-generic-prototype-description
-
-    }
+    "form": [ // http://smarttechdo.com/~avb/pfbc/api/#element-types-generic-prototype-description
+        {
+            "id": "STRING",
+            "type": "ENUM",
+            "label": "STRING",
+            "placeholder": "STRING", // NEW
+            "helptext": "STRING", // NEW
+            "options": "ARRAY",  // Used in elements like Option,Radio,Select. Array could be an associative array or a usual array
+            "value": "STRING", // NEW = Initial Value
+            "attributes": {
+                "append":"STRING",
+                "prepend":"STRING",
+                "inline":"BOOL",
+                "minlength":"INT",
+                "shared":"STRING",
+                "validation":"OBJECT",
+                "inputmask": "STRING", // NEW
+                "required":"BOOL", // NEW
+                "readonly":"BOOL", // NEW
+                "disabled":"BOOL", // NEW
+                "privacy":"OBJECT/ENUM" // NEW = needs work
+            }
+        }
+    ]
 }
 
 ```
